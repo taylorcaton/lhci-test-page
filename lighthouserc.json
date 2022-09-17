@@ -1,0 +1,44 @@
+{
+  "ci": {
+    "assert": {
+      "preset": "lighthouse:no-pwa",
+      "assertions": {
+        "categories:performance": [
+          "warn",
+          {
+            "aggregationMethod": "optimistic",
+            "minScore": 0.80
+          }
+        ],
+        "categories:accessibility": [
+          "warn",
+          {
+            "aggregationMethod": "optimistic",
+            "minScore": 0.90
+          }
+        ]
+      }
+    },
+    "collect": {
+      "method": "node",
+      "additive": false,
+      "headful": false,
+      "numberOfRuns": 3,
+      "url": ["http://129.213.59.2:3000/"]
+    },
+    "upload": {
+      "target": "lhci-test-page",
+      "token": "767d3cc8-db31-459e-9768-375377166e3b",
+      "serverBaseUrl": "http://129.213.59.2:9001"
+    },
+    "server": {
+      "port": 9001,
+      "storage": {
+        "storageMethod": "sql",
+        "sqlConnectionUrl": "postgresql://<username>%40<hostname>:myPassword@<hostname>.postgres.database.azure.com:5432/",
+        "sqlDialect": "postgres",
+        "sqlDatabasePath": "lhci.db"
+      }
+    }
+  }
+}

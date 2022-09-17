@@ -9,14 +9,9 @@ pipeline {
 
   stages {
 
-    stage('Download dependencies') {
+    stage('Download dependencies and Build') {
       steps {
         sh 'npm i'
-      }
-    }
-
-    stage('Build') {
-      steps {
         sh 'npm run build'
       }
     }

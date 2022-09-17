@@ -30,5 +30,6 @@ pipeline {
       steps {
         cleanWs cleanWhenSuccess: false    
       }
+    }
   }
 }

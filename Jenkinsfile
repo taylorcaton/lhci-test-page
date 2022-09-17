@@ -14,7 +14,7 @@ pipeline {
     stage('Download dependencies') {
       steps {
         sh 'npm ci'
-        sh 'npm i @lhci/cli'
+        sh 'npm i @lhci/cli -g'
       }
     }
 

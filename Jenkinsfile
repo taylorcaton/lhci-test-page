@@ -3,10 +3,6 @@ pipeline {
 
   tools {nodejs "nodejs"}
 
-  environment {
-    NODE_ENV = 'production'
-  }
-
   stages {
     stage('Check for vulnerabilities') {
       steps {

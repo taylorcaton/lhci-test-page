@@ -12,8 +12,7 @@ pipeline {
     stage('Download dependencies and Build') {
       steps {
         sh 'npm i'
-        sh 'npm i npm-run-all'
-        sh 'npm run build'
+        sh 'npm run build-only'
       }
     }
 
